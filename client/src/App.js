@@ -7,14 +7,17 @@ import BubblePage from "./components/BubblePage";
 
 //styles
 import "./styles.scss";
+import { Container } from "shards-react";
 
 function App() {
   const [colorList, setColorList] = useState([]);
   return (
     <Router>
       <div className="App">
-        <Route exact path="/" component={Login} />
-        <PrivateRoute exact path="/protected" component={BubblePage} />
+        <Container>
+          <Route exact path="/" component={Login} />
+          <PrivateRoute exact path="/protected" component={BubblePage} />
+        </Container>
       </div>
     </Router>
   );

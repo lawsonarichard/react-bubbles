@@ -8,6 +8,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-image: url("https://i.imgur.com/qIdFPoV.jpg");
 }
 
 .App {
@@ -99,4 +100,16 @@ form {
 }
 .container {
   display: flex !important;
+}
+.login-form {
+  width: 100%;
+}
+.bubble-page {
+  margin-top: 40px;
+}
+.colors-wrap {
+  background-color: white;
+}
+.bubble-wrap {
+  margin-top: 40px;
 }

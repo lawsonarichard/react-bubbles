@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Form, FormInput, FormGroup, Button } from "shards-react";
+import { isThisSecond } from "date-fns";
 
 const Login = props => {
   const [credentials, setCredentials] = useState({
@@ -26,11 +27,15 @@ const Login = props => {
       })
       .catch(error => console.log("Error:", error.response.data.error));
   };
+
+  // testing a logout function
+
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
   return (
     <>
-      <Form>
+      <Form className="login-form">
+        <h1>You must login to see the special bubbles!</h1>
         <FormGroup>
           <label htmlFor="#username">Username</label>
           <FormInput
