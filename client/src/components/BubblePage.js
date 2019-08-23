@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+
 import { axiosWithAuth } from "../utlis/axiosWithAuth";
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
+import { Container, Col } from "shards-react";
 
 const BubblePage = () => {
   const [colorList, setColorList] = useState([]);
@@ -20,10 +21,14 @@ const BubblePage = () => {
   // set that data to the colorList state property
 
   return (
-    <>
-      <ColorList colors={colorList} updateColors={setColorList} />
-      <Bubbles colors={colorList} />
-    </>
+    <Container>
+      <Col>
+        <ColorList colors={colorList} updateColors={setColorList} />
+      </Col>
+      <Col>
+        <Bubbles colors={colorList} />
+      </Col>
+    </Container>
   );
 };
 
