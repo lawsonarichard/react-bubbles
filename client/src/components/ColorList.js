@@ -18,7 +18,6 @@ const ColorList = ({ colors, updateColors }) => {
 
   const saveEdit = e => {
     e.preventDefault();
-    e.preventDefault();
     axiosWithAuth()
       .put(`http://localhost:5000/api/colors/${colorToEdit.id}`, colorToEdit)
       .then(res => {
@@ -36,7 +35,6 @@ const ColorList = ({ colors, updateColors }) => {
   // where is is saved right now?
 
   const deleteColor = e => {
-    e.preventDefault();
     axiosWithAuth()
       .delete(`http://localhost:5000/api/colors/${colorToEdit.id}`)
       .then(res => {
